@@ -11,7 +11,7 @@ app.get("/files", (_req, res) => {
   });
 });
 
-app.use("/", express.static("./public"));
+app.use("/", express.static(import.meta.dir + "/public"));
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
